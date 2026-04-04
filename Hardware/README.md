@@ -1,0 +1,4 @@
+This folder contains the schematic diagram and KiCAD source files for this project. You should be able to produce gerber files, which can be processed into actual PCBs by any board house
+
+IMPORTANT NOTICE
+Please leave pin d9 of the ESP32C3 module disconnected. This is the boot mode selection pin, and connecting it to DO of the last WS281b will result in the ESP32 reliably booting into software upload mode - rendering the system non-functional. You can remove or cut the D9 pin from the module before soldering it onto the PCB or you can cut the trace leading to it from the last LED. If you want to use WS2812b based led strip as a backlight, then the DI pin of the led strip should be connected to the DO pin of the last LED - so either the PAD underneath the D9 pin of the ESP32 or the trace leading to it. THIS PROBLEM MAY BE FIXED IN NEW RELEASES OF THE HARDWARE DESIGN
